@@ -11,12 +11,11 @@ import { FontAwesome5 } from "@expo/vector-icons";
 const Tab = createBottomTabNavigator();
 const TabNavigator = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{ headerShown: false }}>
       <Tab.Screen
         name="Home"
         options={{
-          title: "Home",
-          tabBarIcon: () => <AntDesign name="home" size={30} color="black" />,
+          tabBarIcon: () => <AntDesign name="home" size={24} color="black" />,
         }}
         component={HomeScreen}
       />
@@ -25,7 +24,7 @@ const TabNavigator = () => {
         options={{
           title: "Wishlist",
           tabBarIcon: () => (
-            <MaterialIcons name="favorite-border" size={30} color="black" />
+            <MaterialIcons name="favorite-border" size={24} color="black" />
           ),
         }}
         component={FavriteScreen}
@@ -35,7 +34,7 @@ const TabNavigator = () => {
         options={{
           title: "Cart",
           tabBarIcon: () => (
-            <Feather name="shopping-cart" size={30} color="black" />
+            <Feather name="shopping-cart" size={24} color="black" />
           ),
         }}
         component={CartScreen}
@@ -45,7 +44,7 @@ const TabNavigator = () => {
         options={{
           title: "Profile",
           tabBarIcon: () => (
-            <FontAwesome5 name="user" size={30} color="black" />
+            <FontAwesome5 name="user" size={24} color="black" />
           ),
         }}
         component={ProfileScreen}
